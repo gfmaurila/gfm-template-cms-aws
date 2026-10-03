@@ -36,6 +36,12 @@ RAG e executar automações através do **n8n**.
 
 ![Arquitetura GFM.Template.CMS](docs/Arquitetura-GFM-Template-CMS.png)
 
+![Infográfico GitFlow_ Fluxo Completo CI_CD no Azure GFM.Template.CMS](docs/gitflow.png)
+
+![Fluxo Backend Azure Multi-Tenant](docs/backend.png)
+
+![Fluxo Completo do Front-end em Azure GFM.Template.CMS](docs/frontend.png)
+
 ### 🔄 Fluxo principal
 
 ``` text
