@@ -2679,3 +2679,9 @@ Implementar Bring Your Own AI por tenant. Modos: `ServerManaged`, `CustomerManag
 Preparar adapters para OpenAI, Azure OpenAI, Anthropic, Gemini, Bedrock, OpenAI-compatible e Fake/Local. OpenAI-compatible deve aceitar endpoint configurável para Ollama/vLLM/equivalentes.
 
 Credenciais do cliente são referências de secret e nunca devem aparecer em banco como texto puro, commits, logs, traces ou mensagens de erro. Fallback para IA do servidor é opt-in, auditável e bloqueável. Medir uso, latência, tokens/unidades, falhas e custo estimado por tenant/provider/capacidade quando disponível.
+
+## `solid-architecture-review`
+Validar SRP, OCP, LSP, ISP e DIP em backend, frontend e adapters. Reprovar dependência de Domain/Application em SDK concreto e violações arquiteturais, sem exigir abstrações artificiais.
+
+## `gitflow-ai-delivery`
+Branches protegidas: `main`, `develop`, `hml`. Toda task comum parte de `develop` em `feature/task-<id>-<slug>`. Antes de commit/push: format/lint, build, testes unitários, integração, arquitetura, security checks e documentação. A IA faz commit e push na branch de trabalho, cria PR para `develop`, e o Reviewer Agent valida código, testes, segurança, arquitetura e SOLID. Promoção: `develop -> hml`; produção: `hml -> release/X.Y.Z.B -> main`; após merge criar `vX.Y.Z.B` e GitHub Release. Nunca fazer push direto em branches protegidas.

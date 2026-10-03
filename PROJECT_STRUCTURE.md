@@ -1460,3 +1460,11 @@ Infrastructure/AI/Providers/
 ```
 
 `OpenAICompatible` deve permitir endpoint configurável para Ollama, vLLM ou servidores equivalentes. O provider concreto nunca deve vazar para Domain. Configuração persistida referencia secrets; secrets são resolvidos em runtime. Fallback para ServerManaged somente com consentimento/configuração explícita do tenant.
+
+# 28. SOLID + GitFlow + Branch Strategy
+
+SOLID é padrão obrigatório do projeto junto com DDD, CQRS, Domain Events e Clean Code. Branches permanentes: `main` (produção), `develop` (integração/desenvolvimento) e `hml` (homologação). Toda task parte de `develop` usando `feature/task-<id>-<slug>`. Bugfix usa `bugfix/task-*`, hotfix usa `hotfix/*` e produção usa `release/X.Y.Z.B`.
+
+Fluxo: `feature/task-* -> PR -> develop -> PR -> hml -> release/X.Y.Z.B -> PR -> main -> tag vX.Y.Z.B -> GitHub Release -> PROD`.
+
+Push direto em `main`, `develop` e `hml` é proibido. Cada PR deve passar por build, lint/format, Unit Tests, Integration Tests, Architecture Tests, security scan e revisão SOLID. A IA pode fazer commit/push/PR, mas não pode ignorar approvals, protections ou checks.

@@ -551,3 +551,37 @@ Ler e cumprir `AI_CONTENT_INTELLIGENCE.md`. Todas as possibilidades de provider 
 74. Fallback para IA do servidor é opt-in por tenant, auditável e deve poder ser completamente bloqueado.
 75. Implementar quotas, telemetria e contabilização de uso/custo por tenant/provider/capacidade sem expor secrets ou conteúdo sensível.
 76. Criar testes para resolução BYOAI, isolamento, fallback, ausência de secret, falha de provider e sanitização de logs.
+
+## SOLID + GitFlow + fluxo autônomo de IA obrigatório
+
+77. Aplicar SOLID como padrão obrigatório em backend, frontend e integrações, além de DDD, CQRS, Clean Code e Domain Events já definidos.
+78. O Reviewer Agent deve validar explicitamente SRP, OCP, LSP, ISP e DIP nos Quality Gates, evitando abstrações artificiais sem necessidade.
+79. Branches permanentes: `main` (produção), `develop` (integração/desenvolvimento) e `hml` (homologação). Se `develop` ou `hml` não existirem no remoto, criá-las a partir da base aprovada do projeto e publicá-las.
+80. Seguir GitFlow adaptado do projeto. Toda task nasce de `develop` em `feature/task-<id>-<slug>`. Correções comuns usam `bugfix/task-<id>-<slug>`; hotfix de produção usa `hotfix/<versao-ou-slug>`; preparação de produção usa `release/<major>.<minor>.<patch>.<build>`.
+81. A IA nunca deve fazer push direto para `develop`, `hml` ou `main`. Alterações nessas branches somente por Pull Request aprovado e Quality Gates.
+82. Para cada task: sincronizar `develop`; criar branch da task; implementar; formatar/lintar; buildar; executar testes unitários, integração e arquitetura; executar security checks aplicáveis; atualizar documentação; fazer commit; push; abrir PR `feature/task-* -> develop`; executar AI Reviewer; corrigir reprovações; somente então permitir merge.
+83. Promoção para homologação ocorre por PR `develop -> hml`, executando novamente os Quality Gates e deploy de HML após aprovação.
+84. Para produção, criar `release/X.Y.Z.B` a partir do estado homologado em `hml`, gerar/atualizar changelog e release notes, validar build/test/security e abrir PR `release/X.Y.Z.B -> main`.
+85. Após merge em `main`, criar tag `vX.Y.Z.B`, GitHub Release correspondente e executar o deploy de produção sujeito às aprovações configuradas no GitHub Environment.
+86. A IA pode executar `commit`, `push` e criação/atualização de Pull Request quando possuir credenciais/permissões. Nunca contornar branch protection, required reviews ou checks obrigatórios.
+87. Conventional Commits obrigatório: `feat:`, `fix:`, `refactor:`, `test:`, `docs:`, `chore:`, `ci:`. A mensagem deve identificar a task quando houver ID.
+88. Todo PR deve registrar objetivo, task, alterações, testes executados, impacto arquitetural, segurança, migrations/configuração e checklist SOLID.
+89. GitHub Actions deve validar PRs destinados a `develop`, `hml` e `main`; `main`, `develop` e `hml` devem ser documentadas como branches protegidas.
+90. Não considerar uma task concluída apenas porque o código foi gerado: conclusão exige Quality Gates verdes, documentação coerente e PR criado/validado conforme o fluxo acima.
+
+## SOLID + GitFlow + fluxo autônomo de IA obrigatório
+
+77. Aplicar SOLID como padrão obrigatório em backend, frontend e integrações, além de DDD, CQRS, Clean Code e Domain Events já definidos.
+78. O Reviewer Agent deve validar explicitamente SRP, OCP, LSP, ISP e DIP nos Quality Gates, evitando abstrações artificiais sem necessidade.
+79. Branches permanentes: `main` (produção), `develop` (integração/desenvolvimento) e `hml` (homologação). Se `develop` ou `hml` não existirem no remoto, criá-las a partir da base aprovada do projeto e publicá-las.
+80. Seguir GitFlow adaptado do projeto. Toda task nasce de `develop` em `feature/task-<id>-<slug>`. Correções comuns usam `bugfix/task-<id>-<slug>`; hotfix de produção usa `hotfix/<versao-ou-slug>`; preparação de produção usa `release/<major>.<minor>.<patch>.<build>`.
+81. A IA nunca deve fazer push direto para `develop`, `hml` ou `main`. Alterações nessas branches somente por Pull Request aprovado e Quality Gates.
+82. Para cada task: sincronizar `develop`; criar branch da task; implementar; formatar/lintar; buildar; executar testes unitários, integração e arquitetura; executar security checks aplicáveis; atualizar documentação; fazer commit; push; abrir PR `feature/task-* -> develop`; executar AI Reviewer; corrigir reprovações; somente então permitir merge.
+83. Promoção para homologação ocorre por PR `develop -> hml`, executando novamente os Quality Gates e deploy de HML após aprovação.
+84. Para produção, criar `release/X.Y.Z.B` a partir do estado homologado em `hml`, gerar/atualizar changelog e release notes, validar build/test/security e abrir PR `release/X.Y.Z.B -> main`.
+85. Após merge em `main`, criar tag `vX.Y.Z.B`, GitHub Release correspondente e executar o deploy de produção sujeito às aprovações configuradas no GitHub Environment.
+86. A IA pode executar `commit`, `push` e criação/atualização de Pull Request quando possuir credenciais/permissões. Nunca contornar branch protection, required reviews ou checks obrigatórios.
+87. Conventional Commits obrigatório: `feat:`, `fix:`, `refactor:`, `test:`, `docs:`, `chore:`, `ci:`. A mensagem deve identificar a task quando houver ID.
+88. Todo PR deve registrar objetivo, task, alterações, testes executados, impacto arquitetural, segurança, migrations/configuração e checklist SOLID.
+89. GitHub Actions deve validar PRs destinados a `develop`, `hml` e `main`; `main`, `develop` e `hml` devem ser documentadas como branches protegidas.
+90. Não considerar uma task concluída apenas porque o código foi gerado: conclusão exige Quality Gates verdes, documentação coerente e PR criado/validado conforme o fluxo acima.

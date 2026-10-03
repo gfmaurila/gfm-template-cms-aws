@@ -889,3 +889,20 @@ docker compose logs -f
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Guilherme_Figueiras_Maurila-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/guilherme-maurila)
 
 [![Gmail](https://img.shields.io/badge/Gmail-gfmaurila%40gmail.com-c14438?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gfmaurila@gmail.com)
+
+---
+
+## 🧱 SOLID
+
+Além de DDD, CQRS, Domain Events e Clean Code, o projeto adota **SOLID** como padrão obrigatório: SRP, OCP, LSP, ISP e DIP. O AI Reviewer inclui a validação SOLID nos Quality Gates.
+
+## 🌿 GitFlow e estratégia de branches
+
+Branches permanentes: `main` (produção), `develop` (desenvolvimento/integração) e `hml` (homologação). Cada task nasce de `develop` em `feature/task-<id>-<descricao>`.
+
+```text
+feature/task-* -> PR -> develop -> PR -> hml -> release/X.Y.Z.B -> PR -> main
+                                                                    └-> tag vX.Y.Z.B -> GitHub Release -> Produção
+```
+
+A IA implementa a task, executa Quality Gates, faz **commit + push**, cria o Pull Request e submete o código ao **AI Reviewer**. Push direto em `main`, `develop` e `hml` é proibido. Releases usam quatro componentes, por exemplo `release/1.0.0.0`, gerando a tag `v1.0.0.0` após merge aprovado em `main`.
