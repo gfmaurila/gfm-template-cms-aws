@@ -585,12 +585,3 @@ Ler e cumprir `AI_CONTENT_INTELLIGENCE.md`. Todas as possibilidades de provider 
 88. Todo PR deve registrar objetivo, task, alteraÃ§Ãµes, testes executados, impacto arquitetural, seguranÃ§a, migrations/configuraÃ§Ã£o e checklist SOLID.
 89. GitHub Actions deve validar PRs destinados a `develop`, `hml` e `main`; `main`, `develop` e `hml` devem ser documentadas como branches protegidas.
 90. NÃ£o considerar uma task concluÃ­da apenas porque o cÃ³digo foi gerado: conclusÃ£o exige Quality Gates verdes, documentaÃ§Ã£o coerente e PR criado/validado conforme o fluxo acima.
-
-
----
-
-# 28. KNOWLEDGE-DRIVEN EXECUTION (BOOTSTRAP PREPARATION)
-
-Este projeto possui Knowledge Dictionary carregado em D:\\Empresa\\GFMaurila\\projetos\\Kit-IA-Dev\\dicionario\\. Antes de qualquer execução de Tasks de implementação, o Knowledge Agent DEVE carregar todo o conhecimento consolidado (docs/knowledge/PROJECT_KNOWLEDGE_MAP.md, docs/knowledge/KNOWLEDGE_DECISIONS.md) e validar o KNOWLEDGE QUALITY GATE. Esta execução de bootstrap foi concluída SEM implementação de código. Aguarde autorização explícita antes de executar a primeira TASK READY.
-
-
