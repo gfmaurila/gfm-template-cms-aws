@@ -111,7 +111,7 @@ Pipeline inicial deve prever PDF, TXT, CSV, DOCX e XLSX. Parsers devem ser subst
 
 ## Áudio e vídeo
 
-Manter `AUDIO_INTELLIGENCE.md` como especificação especializada. FFmpeg extrai/normaliza mídia e `ISpeechToTextProvider` converte fala em transcrição. O resultado entra no mesmo pipeline de conteúdo normalizado.
+Manter `docs/ai/docs/ai/AUDIO_INTELLIGENCE.md` como especificação especializada. FFmpeg extrai/normaliza mídia e `ISpeechToTextProvider` converte fala em transcrição. O resultado entra no mesmo pipeline de conteúdo normalizado.
 
 ## Perfil de processamento
 
@@ -247,3 +247,5 @@ Credenciais BYOAI nunca são persistidas em texto puro. Persistir apenas `Secret
 Registrar por tenant/provider/capacidade: chamadas, modelo, latência, tokens/unidades quando disponíveis, custo estimado quando possível, falhas, retries e uso de fallback. Permitir quotas, limites e políticas por tenant.
 
 Testes mínimos: resolução de perfil por tenant; isolamento de credenciais; seleção por capacidade; ServerManaged/CustomerManaged/Hybrid; fallback permitido e bloqueado; provider indisponível; secret ausente; prevenção de vazamento de secrets em logs; contabilização por tenant.
+
+

@@ -1,6 +1,6 @@
 # Audio Intelligence — GFM.Template.CMS
 
-> Pipeline especializado pertencente ao `AI Content Intelligence & Storage Orchestration`. Ver também `AI_CONTENT_INTELLIGENCE.md`.
+> Pipeline especializado pertencente ao `AI Content Intelligence & Storage Orchestration`. Ver também `docs/ai/docs/ai/AI_CONTENT_INTELLIGENCE.md`.
 
 ## Objetivo
 
@@ -165,3 +165,5 @@ A escolha de serviços AWS concretos deve ser registrada em ADR e não deve queb
 - webhook n8n fake;
 - integração do Worker.Media;
 - observabilidade básica.
+
+

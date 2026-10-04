@@ -548,7 +548,7 @@ Evita duplicação.
 Manter:
 
 ```text
-PROJECT_SKILLS.md
+docs/project/docs/project/PROJECT_SKILLS.md
 ```
 
 ou:
@@ -1075,7 +1075,7 @@ constraints
 
 ---
 
-# 62. PROJECT_STRUCTURE.md
+# 62. docs/architecture/docs/architecture/PROJECT_STRUCTURE.md
 
 Define estrutura esperada.
 
@@ -1090,7 +1090,7 @@ Funciona como contrato arquitetural.
 
 ---
 
-# 63. PROJECT_SKILLS.md
+# 63. docs/project/docs/project/PROJECT_SKILLS.md
 
 Lista skills disponíveis.
 
@@ -1104,7 +1104,7 @@ path
 
 ---
 
-# 64. SEED_FAKE_DATA.md
+# 64. docs/project/docs/project/SEED_FAKE_DATA.md
 
 Quando o projeto utiliza dados fake:
 
@@ -2492,10 +2492,10 @@ Artifacts importantes funcionam como contratos:
 
 ```text
 REQUIREMENTS.md
-PROJECT_STRUCTURE.md
+docs/architecture/docs/architecture/PROJECT_STRUCTURE.md
 ARCHITECTURE_PLAN.md
 EXECUTION_PLAN.md
-PROJECT_SKILLS.md
+docs/project/docs/project/PROJECT_SKILLS.md
 ```
 
 ---
@@ -2787,3 +2787,5 @@ REQUIREMENTS
 ```text
 18-kit-ia-dev.md
 ```
+
+

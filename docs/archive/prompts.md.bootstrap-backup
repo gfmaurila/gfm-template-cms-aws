@@ -48,10 +48,10 @@ O projeto possui quatro documentos principais de orquestração e especificaçã
 
 ```text
 prompts.md
-PROJECT_STRUCTURE.md
-PROJECT_SKILLS.md
-AUDIO_INTELLIGENCE.md
-SEED_FAKE_DATA.md
+docs/architecture/PROJECT_STRUCTURE.md
+docs/project/PROJECT_SKILLS.md
+docs/ai/AUDIO_INTELLIGENCE.md
+docs/project/SEED_FAKE_DATA.md
 ```
 
 Eles devem ser processados nesta ordem:
@@ -59,13 +59,13 @@ Eles devem ser processados nesta ordem:
 ```text
 prompts.md
         ↓
-PROJECT_STRUCTURE.md
+docs/architecture/PROJECT_STRUCTURE.md
         ↓
-PROJECT_SKILLS.md
+docs/project/PROJECT_SKILLS.md
         ↓
-AUDIO_INTELLIGENCE.md
+docs/ai/AUDIO_INTELLIGENCE.md
         ↓
-SEED_FAKE_DATA.md
+docs/project/SEED_FAKE_DATA.md
 ```
 
 Cada documento possui uma responsabilidade específica.
@@ -88,7 +88,7 @@ quality gates
 critérios de conclusão
 ```
 
-## PROJECT_STRUCTURE.md
+## docs/architecture/PROJECT_STRUCTURE.md
 
 Define a estrutura física oficial do:
 
@@ -122,7 +122,7 @@ Skills
 scripts
 ```
 
-## PROJECT_SKILLS.md
+## docs/project/PROJECT_SKILLS.md
 
 Define:
 
@@ -134,7 +134,7 @@ regras de reutilização
 integração com agentes
 ```
 
-## SEED_FAKE_DATA.md
+## docs/project/SEED_FAKE_DATA.md
 
 Define:
 
@@ -282,7 +282,7 @@ A execução completa do projeto deverá seguir:
 07. Configurar AGENTS.md
 08. Configurar suporte multi-tool
 
-09. Ler PROJECT_STRUCTURE.md
+09. Ler docs/architecture/PROJECT_STRUCTURE.md
 10. Criar estrutura oficial do GFM.Template.CMS
 11. Criar solution e projetos
 12. Configurar referências entre projetos
@@ -291,13 +291,13 @@ A execução completa do projeto deverá seguir:
 14. Instalar Skills avançadas
 15. Aplicar atualizações das Skills existentes
 
-16. Ler PROJECT_SKILLS.md
+16. Ler docs/project/PROJECT_SKILLS.md
 17. Mapear Skills necessárias
 18. Estender Skills existentes quando possível
 19. Criar Skills específicas ausentes
 20. Validar ativação das Skills
 
-21. Ler SEED_FAKE_DATA.md
+21. Ler docs/project/SEED_FAKE_DATA.md
 22. Registrar seus requisitos para implementação posterior
 
 23. Consolidar requisitos do projeto
@@ -350,11 +350,11 @@ A execução completa do projeto deverá seguir:
 56. Implementar RAG
 57. Implementar AI Tools
 58. Implementar Agents
-59. Implementar AI Content Intelligence & Storage Orchestration conforme `AI_CONTENT_INTELLIGENCE.md`
+59. Implementar AI Content Intelligence & Storage Orchestration conforme `docs/ai/AI_CONTENT_INTELLIGENCE.md`
 60. Implementar Storage Providers por tenant/perfil: Local, MinIO, S3, Google Drive, OneDrive e SharePoint
 61. Implementar Content Orchestrator para documentos, áudio e vídeo
 62. Implementar parsers de documentos através de abstrações
-63. Implementar Audio Intelligence conforme `AUDIO_INTELLIGENCE.md`
+63. Implementar Audio Intelligence conforme `docs/ai/AUDIO_INTELLIGENCE.md`
 64. Implementar pipeline FFmpeg / normalização de mídia
 65. Implementar Speech-to-Text através de abstração de provider
 66. Implementar processamento assíncrono, idempotente e multi-tenant
@@ -375,7 +375,7 @@ A execução completa do projeto deverá seguir:
 
 72. Implementar Migrations
 
-73. Implementar SEED_FAKE_DATA.md
+73. Implementar docs/project/SEED_FAKE_DATA.md
 
 74. Executar Migration
 75. Executar Seed automático
@@ -444,9 +444,9 @@ A fonte de verdade do projeto será:
 GFM.Template.CMS/
 │
 ├── prompts.md
-├── PROJECT_STRUCTURE.md
-├── PROJECT_SKILLS.md
-├── SEED_FAKE_DATA.md
+├── docs/architecture/PROJECT_STRUCTURE.md
+├── docs/project/PROJECT_SKILLS.md
+├── docs/project/SEED_FAKE_DATA.md
 ├── CLAUDE.md
 ├── AGENTS.md
 │
@@ -467,13 +467,13 @@ Todos estes elementos devem representar o mesmo sistema:
 ```text
 prompts.md
         ↓
-PROJECT_STRUCTURE.md
+docs/architecture/PROJECT_STRUCTURE.md
         ↓
-PROJECT_SKILLS.md
+docs/project/PROJECT_SKILLS.md
         ↓
-AUDIO_INTELLIGENCE.md
+docs/ai/AUDIO_INTELLIGENCE.md
         ↓
-SEED_FAKE_DATA.md
+docs/project/SEED_FAKE_DATA.md
         ↓
 ADRs
         ↓
@@ -516,9 +516,9 @@ Primeiro execute somente:
 
 3. Confirmar a existência de:
    - prompts.md;
-   - PROJECT_STRUCTURE.md;
-   - PROJECT_SKILLS.md;
-   - SEED_FAKE_DATA.md.
+   - docs/architecture/PROJECT_STRUCTURE.md;
+   - docs/project/PROJECT_SKILLS.md;
+   - docs/project/SEED_FAKE_DATA.md.
 
 4. Identificar a ferramenta de IA de código utilizada.
 
@@ -540,7 +540,7 @@ O CI/CD oficial deste template é GitHub Actions. Criar `.github/workflows` com 
 
 ## Content Intelligence obrigatório
 
-Ler e cumprir `AI_CONTENT_INTELLIGENCE.md`. Todas as possibilidades de provider devem existir como adapters/configurações selecionáveis por tenant, porém integrações que exigem credenciais externas devem iniciar desabilitadas e nunca impedir o ambiente local de subir.
+Ler e cumprir `docs/ai/AI_CONTENT_INTELLIGENCE.md`. Todas as possibilidades de provider devem existir como adapters/configurações selecionáveis por tenant, porém integrações que exigem credenciais externas devem iniciar desabilitadas e nunca impedir o ambiente local de subir.
 
 ## BYOAI — Bring Your Own AI
 
@@ -585,3 +585,4 @@ Ler e cumprir `AI_CONTENT_INTELLIGENCE.md`. Todas as possibilidades de provider 
 88. Todo PR deve registrar objetivo, task, alterações, testes executados, impacto arquitetural, segurança, migrations/configuração e checklist SOLID.
 89. GitHub Actions deve validar PRs destinados a `develop`, `hml` e `main`; `main`, `develop` e `hml` devem ser documentadas como branches protegidas.
 90. Não considerar uma task concluída apenas porque o código foi gerado: conclusão exige Quality Gates verdes, documentação coerente e PR criado/validado conforme o fluxo acima.
+

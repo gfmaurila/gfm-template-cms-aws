@@ -2662,7 +2662,7 @@ O código, as Skills, os diagramas, os ADRs, a infraestrutura, os testes e o `pr
 
 ## `content-intelligence-orchestration`
 
-Responsável pela ingestão e análise multi-tenant de documentos, áudio e vídeo. Deve cumprir `AI_CONTENT_INTELLIGENCE.md`, usar abstrações de Storage Provider, Content Orchestrator, LLM/RAG/Agents e respeitar autorização e isolamento por tenant.
+Responsável pela ingestão e análise multi-tenant de documentos, áudio e vídeo. Deve cumprir `docs/ai/docs/ai/AI_CONTENT_INTELLIGENCE.md`, usar abstrações de Storage Provider, Content Orchestrator, LLM/RAG/Agents e respeitar autorização e isolamento por tenant.
 
 ## `multi-tenant-storage-providers`
 
@@ -2685,3 +2685,5 @@ Validar SRP, OCP, LSP, ISP e DIP em backend, frontend e adapters. Reprovar depen
 
 ## `gitflow-ai-delivery`
 Branches protegidas: `main`, `develop`, `hml`. Toda task comum parte de `develop` em `feature/task-<id>-<slug>`. Antes de commit/push: format/lint, build, testes unitários, integração, arquitetura, security checks e documentação. A IA faz commit e push na branch de trabalho, cria PR para `develop`, e o Reviewer Agent valida código, testes, segurança, arquitetura e SOLID. Promoção: `develop -> hml`; produção: `hml -> release/X.Y.Z.B -> main`; após merge criar `vX.Y.Z.B` e GitHub Release. Nunca fazer push direto em branches protegidas.
+
+

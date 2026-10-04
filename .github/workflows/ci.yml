@@ -15,10 +15,11 @@ jobs:
         with:
           fetch-depth: 0
       - name: Branch policy
-        run: echo "Validate GitFlow rules from prompts.md and GITFLOW_AI_DELIVERY.md"
+        run: echo "Validate GitFlow rules from prompts.md and docs/governance/GITFLOW_AI_DELIVERY.md"
       - name: Backend quality gates
         run: echo "Generator expands dotnet restore/build/format/test: unit, integration and architecture"
       - name: Frontend quality gates
         run: echo "Generator expands install/lint/typecheck/test/build for React apps"
       - name: SOLID and architecture review
         run: echo "AI Reviewer validates SOLID and architecture rules before merge"
+

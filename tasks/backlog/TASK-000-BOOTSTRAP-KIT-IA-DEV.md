@@ -13,7 +13,7 @@ Implementação de código da aplicação.
 D:\Empresa\GFMaurila\projetos\Kit-IA-Dev\dicionario\*.md
 
 ## Architecture References
-PROJECT_STRUCTURE.md, prompts.md, GITFLOW_AI_DELIVERY.md
+docs/architecture/docs/architecture/PROJECT_STRUCTURE.md, prompts.md, docs/governance/docs/governance/GITFLOW_AI_DELIVERY.md
 
 ## Acceptance Criteria
 - D:\Empresa\GFMaurila\projetos\Kit-IA-Dev\dicionario\ copiado
@@ -25,5 +25,7 @@ PROJECT_STRUCTURE.md, prompts.md, GITFLOW_AI_DELIVERY.md
 
 ## Branch
 feature/task-000-bootstrap-kit-ia-dev
+
+
 
 

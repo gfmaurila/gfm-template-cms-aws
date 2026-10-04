@@ -912,3 +912,12 @@ feature/task-* -> PR -> develop -> PR -> hml -> release/X.Y.Z.B -> PR -> main
 ```
 
 A IA implementa a task, executa Quality Gates, faz **commit + push**, cria o Pull Request e submete o código ao **AI Reviewer**. Push direto em `main`, `develop` e `hml` é proibido. Releases usam quatro componentes, por exemplo `release/1.0.0.0`, gerando a tag `v1.0.0.0` após merge aprovado em `main`.
+
+## Documentation
+
+Project documentation is organized under: docs/  
+
+Documentation index: [docs/README.md](docs/README.md)  
+
+AI orchestration entry point: [prompts.md](prompts.md)
+

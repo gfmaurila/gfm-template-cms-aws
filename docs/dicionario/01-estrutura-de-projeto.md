@@ -70,8 +70,8 @@ project-root/
 ├── docker-compose.yml
 ├── prompts.md
 ├── PROJECT.md
-├── PROJECT_STRUCTURE.md
-├── PROJECT_SKILLS.md
+├── docs/architecture/docs/architecture/PROJECT_STRUCTURE.md
+├── docs/project/docs/project/PROJECT_SKILLS.md
 └── README.md
 ```
 
@@ -387,7 +387,7 @@ Arquivos importantes:
 ```text
 README.md
 PROJECT.md
-PROJECT_STRUCTURE.md
+docs/architecture/docs/architecture/PROJECT_STRUCTURE.md
 ARCHITECTURE.md
 REQUIREMENTS.md
 EXECUTION_PLAN.md
@@ -615,7 +615,7 @@ Antes de alterar qualquer projeto, a IA deve:
 
 1. Ler `README.md`.
 2. Ler `PROJECT.md`.
-3. Ler `PROJECT_STRUCTURE.md`.
+3. Ler `docs/architecture/docs/architecture/PROJECT_STRUCTURE.md`.
 4. Ler `prompts.md`.
 5. Identificar stack.
 6. Identificar arquitetura.
@@ -746,3 +746,5 @@ Ela define o padrão de engenharia utilizado por humanos e agentes de IA para tr
 A estrutura conecta:
 
 **Arquitetura + Código + Testes + Docker + Cloud + DevOps + Documentação + Agents + Skills + Quality Gates.**
+
+

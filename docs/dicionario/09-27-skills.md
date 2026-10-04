@@ -778,7 +778,7 @@ Registry
 Criar um catálogo central:
 
 ```text
-PROJECT_SKILLS.md
+docs/project/docs/project/PROJECT_SKILLS.md
 ```
 
 ou:
@@ -1039,3 +1039,5 @@ em vez de criar uma nova skill para cada tarefa.
 ```text
 09-27-skills.md
 ```
+
+

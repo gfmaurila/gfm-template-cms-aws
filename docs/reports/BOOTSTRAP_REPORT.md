@@ -9,7 +9,7 @@ Kit IA Dev: D:\Empresa\GFMaurila\projetos\Kit-IA-Dev\Kit-IA-Dev
 - Preservação SKILL.md + references/ mantida
 
 2) Repositório gfm-template-cms-aws
-- Docs existentes: prompts.md, PROJECT_STRUCTURE.md, PROJECT_SKILLS.md, README.md, GITFLOW_AI_DELIVERY.md, SEED_FAKE_DATA.md, AI_CONTENT_INTELLIGENCE.md, AUDIO_INTELLIGENCE.md
+- Docs existentes: prompts.md, docs/architecture/docs/architecture/PROJECT_STRUCTURE.md, docs/project/docs/project/PROJECT_SKILLS.md, README.md, docs/governance/docs/governance/GITFLOW_AI_DELIVERY.md, docs/project/docs/project/SEED_FAKE_DATA.md, docs/ai/docs/ai/AI_CONTENT_INTELLIGENCE.md, docs/ai/docs/ai/AUDIO_INTELLIGENCE.md
 - GitFlow/CI definidos (.github/workflows)
 - Arquitetura multi-tenant descrita (AWS target, DDD/CQRS, Modular Monolith)
 
@@ -57,5 +57,7 @@ DONE: 1 (TASK-000)
 Dependency Graph: tasks/DEPENDENCY_GRAPH.md
 Planned Task Branches: Definidas (sem criação nesta execução)
 Implementation Started: NO
+
+
 
 

@@ -83,8 +83,8 @@ GFM.Template.CMS/
 ├── prompts.md
 ├── CLAUDE.md
 ├── AGENTS.md
-├── PROJECT_SKILLS.md
-├── PROJECT_STRUCTURE.md
+├── docs/project/docs/project/PROJECT_SKILLS.md
+├── docs/architecture/docs/architecture/PROJECT_STRUCTURE.md
 │
 ├── Directory.Build.props
 ├── Directory.Packages.props
@@ -974,7 +974,7 @@ Os arquivos em `exports/` são derivados.
 └── README.md
 ```
 
-O `PROJECT_SKILLS.md` funciona como catálogo.
+O `docs/project/docs/project/PROJECT_SKILLS.md` funciona como catálogo.
 
 Cada:
 
@@ -1141,8 +1141,8 @@ GFM.Template.CMS/
 ├── prompts.md
 ├── CLAUDE.md
 ├── AGENTS.md
-├── PROJECT_SKILLS.md
-├── PROJECT_STRUCTURE.md
+├── docs/project/docs/project/PROJECT_SKILLS.md
+├── docs/architecture/docs/architecture/PROJECT_STRUCTURE.md
 │
 ├── GFM.Template.CMS.sln
 └── README.md
@@ -1382,9 +1382,9 @@ A seguinte cadeia deve permanecer sincronizada:
 ```text
 prompts.md
     ↓
-PROJECT_STRUCTURE.md
+docs/architecture/docs/architecture/PROJECT_STRUCTURE.md
     ↓
-PROJECT_SKILLS.md
+docs/project/docs/project/PROJECT_SKILLS.md
     ↓
 ADRs
     ↓
@@ -1411,8 +1411,8 @@ Nenhum agente deve criar diretórios, projetos ou camadas arquiteturais arbitrá
 
 ```text
 prompts.md
-PROJECT_STRUCTURE.md
-PROJECT_SKILLS.md
+docs/architecture/docs/architecture/PROJECT_STRUCTURE.md
+docs/project/docs/project/PROJECT_SKILLS.md
 ADRs
 arquitetura existente
 código existente
@@ -1426,7 +1426,7 @@ A organização deve refletir responsabilidades reais.
 
 # 25. AI Content Intelligence & Storage Orchestration
 
-A arquitetura deve implementar a especificação `AI_CONTENT_INTELLIGENCE.md`. Storage é resolvido por tenant/perfil através de abstrações. Providers previstos: Local, MinIO, Amazon S3, Google Drive, OneDrive e SharePoint. Documentos, áudio e vídeo convergem para um Content Orchestrator e podem seguir para LLM, RAG, Agents/Tools e automações n8n. Credenciais são referenciadas por secrets e nunca persistidas em texto puro.
+A arquitetura deve implementar a especificação `docs/ai/docs/ai/AI_CONTENT_INTELLIGENCE.md`. Storage é resolvido por tenant/perfil através de abstrações. Providers previstos: Local, MinIO, Amazon S3, Google Drive, OneDrive e SharePoint. Documentos, áudio e vídeo convergem para um Content Orchestrator e podem seguir para LLM, RAG, Agents/Tools e automações n8n. Credenciais são referenciadas por secrets e nunca persistidas em texto puro.
 
 # 26. CI/CD oficial — GitHub Actions
 
@@ -1468,3 +1468,5 @@ SOLID é padrão obrigatório do projeto junto com DDD, CQRS, Domain Events e Cl
 Fluxo: `feature/task-* -> PR -> develop -> PR -> hml -> release/X.Y.Z.B -> PR -> main -> tag vX.Y.Z.B -> GitHub Release -> PROD`.
 
 Push direto em `main`, `develop` e `hml` é proibido. Cada PR deve passar por build, lint/format, Unit Tests, Integration Tests, Architecture Tests, security scan e revisão SOLID. A IA pode fazer commit/push/PR, mas não pode ignorar approvals, protections ou checks.
+
+

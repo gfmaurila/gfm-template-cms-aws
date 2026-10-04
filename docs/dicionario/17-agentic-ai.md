@@ -1955,7 +1955,7 @@ quality rules
 
 ---
 
-# 122. PROJECT_SKILLS.md
+# 122. docs/project/docs/project/PROJECT_SKILLS.md
 
 Catálogo:
 
@@ -2332,3 +2332,5 @@ No Kit IA Dev, agentes devem ser especializados, orientados a artifacts, limitad
 ```text
 17-agentic-ai.md
 ```
+
+
